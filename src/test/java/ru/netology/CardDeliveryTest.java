@@ -27,7 +27,7 @@ public class CardDeliveryTest {
     public void shouldCardDeliveryWithCssSelectors() {
         $("[data-test-id=city] .input__control").setValue("Москва");
         LocalDate today = LocalDate.now();
-        LocalDate dayOfMeeting = today.plusDays(7);
+        LocalDate dayOfMeeting = today.plusDays(9);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         String formattedDate = dayOfMeeting.format(formatter);
         $("[data-test-id=date] .input__control").sendKeys(Keys.CONTROL + "A");
